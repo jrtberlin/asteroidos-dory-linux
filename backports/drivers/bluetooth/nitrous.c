@@ -479,6 +479,7 @@ static int nitrous_probe(struct platform_device *pdev)
 	if (unlikely(rc))
 		goto err_lpm_init;
 
+	printk("pwet\n");
 	rc = nitrous_rfkill_init(pdev, lpm);
 	if (unlikely(rc))
 		goto err_rfkill_init;
@@ -486,6 +487,7 @@ static int nitrous_probe(struct platform_device *pdev)
 	platform_set_drvdata(pdev, lpm);
 	bt_lpm = lpm;
 
+	printk("pwet\n");
 	return rc;
 
 err_rfkill_init:
