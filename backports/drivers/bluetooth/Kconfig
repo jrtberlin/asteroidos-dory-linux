@@ -310,4 +310,12 @@ config BACKPORT_BT_WILINK
 	  Say Y here to compile support for Texas Instrument's WiLink7 driver
 	  into the kernel or say M to compile it as module (btwilink).
 
+
+config BACKPORT_MSM_BT_SLEEP
+        tristate "MSM Bluesleep driver"
+        depends on BT && SERIAL_MSM_HS
+        help
+          Bluetooth MSM bluesleep driver.
+          This driver provides support for BT sleep.
+
 endmenu
